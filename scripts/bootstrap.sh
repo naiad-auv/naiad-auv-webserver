@@ -29,6 +29,22 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o \
     Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" \
     dist-upgrade
 
+###
+# Remove packages not needed anymore.
+###
+sudo apt-get -y autoclean
+sudo apt-get -y autoremove
+
+#############################################
+# Configuration of base Ubuntu installation
+#############################################
+
+###
+# Enable ufw and allow SSH traffic.
+###
+sudo ufw allow ssh
+sudo ufw enable
+
 #############################################
 # Install packages
 #############################################
