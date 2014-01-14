@@ -43,7 +43,7 @@ sudo apt-get -y autoremove
 # Enable ufw and allow SSH traffic.
 ###
 sudo ufw allow ssh
-sudo ufw enable
+sudo ufw --force enable
 sudo ufw status verbose
 
 #############################################
