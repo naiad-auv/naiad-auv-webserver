@@ -13,6 +13,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # doesn't already exist on the user's system.
     config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
+    # Compare the box against this checksum to confirm
+    # that no corruption occured during the download process.
+    checksum = "9a8bdea70e1d35c1d7733f587c34af07491872f2832f0bc5f875b536520ec17e"
+
+    config.vm.box_download_checksum = checksum
+    config.vm.box_download_checksum_type = "sha256"
+
     # How provisioning should be done.
     config.vm.provision :shell, :path => "./scripts/bootstrap.sh"
 
