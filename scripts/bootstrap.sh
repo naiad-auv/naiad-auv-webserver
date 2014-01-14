@@ -15,7 +15,7 @@ sudo sed -i.orig "s|${ORIG_REPO}|${NEW_REPO}|g" /etc/apt/sources.list
 ###
 # Update package list from new repository
 ###
-sudo apt-get update
+sudo apt-get -y update
 
 ###
 # Upgrade all packages to the latest version with dist-upgrade
@@ -30,5 +30,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o \
     dist-upgrade
 
 #############################################
-# Install wanted packages
+# Install packages
 #############################################
+
+###
+# Install some basic tools that can be useful.
+###
+sudo apt-get -y install vim git bzr subversion
