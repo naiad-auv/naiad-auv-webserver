@@ -44,6 +44,7 @@ sudo apt-get -y autoremove
 ###
 sudo ufw allow ssh
 sudo ufw enable
+sudo ufw status verbose
 
 #############################################
 # Install packages
