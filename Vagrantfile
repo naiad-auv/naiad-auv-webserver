@@ -24,7 +24,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision :shell, :path => "./scripts/bootstrap.sh"
 
     # Open up the VM to the local network.
-    config.vm.network "public_network" # Bridged network.
+    # Disabled this by default as it will require the user to manually
+    # answer a question after download and installation of the base
+    # box but before configuration.
+    # config.vm.network "public_network" # Bridged network.
 
     # Share an additional folder to the guest VM. The first argument is
     # the path on the host to the actual folder. The second argument is
