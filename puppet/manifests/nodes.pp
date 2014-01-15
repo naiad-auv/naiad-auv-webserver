@@ -1,10 +1,10 @@
 node default {
-    user { 'christoffer':
+    user { 'naiad':
         ensure => 'present',
         groups => ['sudo'],
-        home => '/home/christoffer',
+        home => '/home/naiad',
         managehome => true,
-        password => '$6$b6HwkAtzctT.$6tM.nVrXzsficTolxfzSy/2BeuMKSAGyhWOnx1tf.eb.7pdkM3Qb6Pe11OsHOkEtbnUilT8ln9OBfUzFoZd/m1',
+        password => '$6$xhCZGn6cQKgbSL8i$N8FRkfatK6rPHBfP1qOVspydAmHa1RpZVB9VUutI.64ArSz6AosEveaxnnYmEG0s8us9SgxvSPExH1SPEQ4me1',
         shell => '/bin/bash',
     }
 }
