@@ -14,3 +14,10 @@ Ubuntu 12.04.4 virtual server machine for use as a webserver.
  * Nginx instead of Apache2
  * HTTPS
  * Better database software?
+
+### Usage
+```
+vagrant up
+vagrant ssh
+$ sudo puppet apply host/puppet/manifests/site.pp
+```
