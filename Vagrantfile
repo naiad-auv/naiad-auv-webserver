@@ -24,6 +24,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision :shell, :path => "./scripts/bootstrap.sh"
     config.vm.provision :shell, :path => "./scripts/install-puppet.sh"
 
+    config.vm.provision "puppet" do |puppet|
+        puppet.manifests_path = "puppet/manifests"
+        puppet.manifest_file = "site.pp"
+    end
+
     # Open up the VM to the local network.
     # Disabled this by default as it will require the user to manually
     # answer a question after download and installation of the base
