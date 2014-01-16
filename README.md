@@ -17,6 +17,7 @@ Ubuntu 12.04.4 virtual server machine for use as a webserver.
 
 ### Usage
 ```
+vagrant plugin install vagrant-vbguest
 vagrant up
 vagrant ssh
 $ sudo puppet apply host/puppet/manifests/site.pp
