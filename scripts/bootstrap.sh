@@ -7,7 +7,7 @@
 ###
 # Changing to a Ubuntu repository closer to home
 ###
-ORIG_REPO="http://us.archive.ubuntu.com/ubuntu/"
+ORIG_REPO="http://archive.ubuntu.com/ubuntu/"
 NEW_REPO="http://ftp.sunet.se/pub/os/Linux/distributions/ubuntu/ubuntu/"
 sudo sed -i.orig "s|${ORIG_REPO}|${NEW_REPO}|g" /etc/apt/sources.list
 
