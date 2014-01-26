@@ -1,2 +1,8 @@
 # Vagrant
 .vagrant
+
+# Puppet
+puppet/.librarian/
+puppet/.tmp/
+puppet/Puppetfile.lock
+puppet/modules/
