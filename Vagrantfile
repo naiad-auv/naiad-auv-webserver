@@ -15,10 +15,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Compare the box against this checksum to confirm
     # that no corruption occured during the download process.
-    checksum = "e1a6de177f0a8f81f1573554aee3b76c7bed70e3fb5f851e1743cc7c739efb1f"
+    # checksum = "e1a6de177f0a8f81f1573554aee3b76c7bed70e3fb5f851e1743cc7c739efb1f"
 
-    config.vm.box_download_checksum = checksum
-    config.vm.box_download_checksum_type = "sha256"
+    # config.vm.box_download_checksum = checksum
+    # config.vm.box_download_checksum_type = "sha256"
 
     # How provisioning should be done.
     config.vm.provision :shell, :path => "./scripts/bootstrap.sh"
