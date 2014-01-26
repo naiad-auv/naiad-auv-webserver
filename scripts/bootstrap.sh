@@ -52,4 +52,5 @@ sudo ufw status verbose
 ###
 # Install some basic tools that can be useful.
 ###
-# sudo apt-get -y install vim git bzr subversion build-essential
+#sudo apt-get -y install vim git bzr subversion build-essential
+sudo apt-get -y install git
