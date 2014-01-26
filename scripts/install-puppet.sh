@@ -14,7 +14,9 @@ PUPPET_DIR='host/puppet'
 ###
 # Install Puppet (without agent init scripts, standalone deployment)
 ###
-sudo apt-get -y install puppet-common librarian-puppet
+# sudo apt-get -y install puppet-common librarian-puppet
+sudo apt-get -y install puppet-common
+gem install librarian-puppet-maestrodev
 
 ###
 # Run libraian-puppet to install required modules
