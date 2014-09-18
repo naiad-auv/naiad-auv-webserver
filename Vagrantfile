@@ -7,18 +7,18 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Every Vagrant virtual environment requires a box to build off of.
-    config.vm.box = "precise64"
+    config.vm.box = "ubuntu/trusty64"
 
     # The url from where the 'config.vm.box' box will be fetched if it
     # doesn't already exist on the user's system.
-    config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    # config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
     # Compare the box against this checksum to confirm
     # that no corruption occured during the download process.
-    checksum = "9a8bdea70e1d35c1d7733f587c34af07491872f2832f0bc5f875b536520ec17e"
+    # checksum = "9a8bdea70e1d35c1d7733f587c34af07491872f2832f0bc5f875b536520ec17e"
 
-    config.vm.box_download_checksum = checksum
-    config.vm.box_download_checksum_type = "sha256"
+    # config.vm.box_download_checksum = checksum
+    # config.vm.box_download_checksum_type = "sha256"
 
     # How provisioning should be done.
     config.vm.provision :shell, :path => "./scripts/bootstrap.sh"
@@ -51,8 +51,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
        # CPU and memory settings
 
        # Recommended settings
-       vb.customize ["modifyvm", :id, "--memory", "1024"]
-       vb.customize ["modifyvm", :id, "--cpus", "1"]
+       vb.customize ["modifyvm", :id, "--memory", "4096"]
+       vb.customize ["modifyvm", :id, "--cpus", "4"]
 
        # Low-end settings
        # vb.customize ["modifyvm", :id, "--memory", "512"]
